@@ -10,9 +10,9 @@ class SearchingAlgorithm {
      */
     fun linearSearch(unsortedArray: Array<Int>,target:Int): Int {
 
-        for(i in unsortedArray){
+        for(i in 0 until unsortedArray.size){
 
-            if(unsortedArray[i] == target){
+            if(target == i){
                 return unsortedArray[i]
             }
 
@@ -30,12 +30,12 @@ class SearchingAlgorithm {
      */
     fun binarySearch(sortedArray: Array<Int>,target:Int) : Int{
 
-        var first = sortedArray[0]
+        var first = 0
         var last = sortedArray.size -1;
 
         while (first <= last){
 
-            val middle = first + last / 2
+            val middle = (first + last) / 2
 
             if(target == middle){
                 return sortedArray[middle]
